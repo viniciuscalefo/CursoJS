@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interação DOM</title>
+    <style> 
+    div#area{
+        font: normal,26pt,Arial;
+        background-color: rgb(12, 12, 12);
+        color: greenyellow;
+        width: 200px;
+        height: 200px;
+        text-align: center;
+        line-height: 200px;
+
+    }
+    
+    </style>
+</head>
+<body>
+    <div id= area >                     <!--forma mais poluida de fazer interações-->
+        <strong>Interaja</strong>       <!--onclick="clicar()" onmouseenter="entrou()" onmouseleave="saiu()"-->
+    </div>
+
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)           /* forma menos poluida, adicionado listeners*/
+        a.addEventListener('mouseenter', entrou)      /*dado por ('comando', oq quer que apareça quando o comando for realizado)*/
+        a.addEventListener('mouseout', saiu)
+        function clicar() {                           /* se o erro não aparecer no codigo, inspeciona a pagina no google*/
+            a.innerText= 'clicou'
+            a.style.background = 'red'
+        }
+        function entrou(){
+            a.innerText= 'entrou'
+        }
+        function saiu(){
+            a.innerText= 'saiu'
+        }
+    </script>
+    
+</body>
+</html>

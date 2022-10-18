@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+     <!--area do terreno-->
+    <script>
+        var comprimento = window.prompt('Qual o comprimento da sua área ?')
+        var largura = window.prompt('Qual o largura da sua área')
+        var area = comprimento*largura
+        window.alert('A área do seu terreno é ' +area)
+    </script>
+
+     <!--area do quadrado-->
+    <script>
+         var mede = window.prompt('Quanto seu quadrado mede ?')
+
+
+        var area_quadrado = mede*mede
+        window.alert('A área de seu quadrado é : ' +area_quadrado+ 'cm² ')
+    </script>
+        
+        <!--hipotenusas-->
+        <script>
+        var cat1 = window.prompt('Qual o cateto do seu triangulo ?')
+        var cat2 = window.prompt ('Qual o  outro cateto do seu triangulo ?')
+        var hipo = (cat1** 2) +  (cat2** 2)
+        window.alert(' hipotenusa de seu triangulo é : ' +Math.sqrt(hipo))
+        </script>
+</body>
+</html>

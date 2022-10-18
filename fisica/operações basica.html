@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OP básicas</title>
+</head>
+<style>
+    body{
+        background-color: rgb(233, 193, 193); /*configuração da pagina*/
+        font:normal 20pt Arial;
+    }
+    div#area{
+        font: normal,30pt,Arial;
+        background-color: aqua;
+        color: rgb(38, 31, 44);
+        width: 100px;
+        height: 100px;
+        text-align:justify;
+        line-height: 100px;
+    }
+</style>
+<body>
+    <div id="area"> Interaja </div>
+
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('click',clicar)
+        a.addEventListener('mouseenter',entrou)
+        a.addEventListener('mouseout', saiu)
+        function clicar() {                           /* se o erro não aparecer no codigo, inspeciona a pagina no google*/
+            a.innerText= 'clicou'
+            a.style.background = 'red'
+        }
+        function entrou(){
+            a.innerText= 'entrou'
+        }
+        function saiu(){
+            a.innerText= 'saiu'
+        }
+    </script>
+    <h1> calculo de distancia</h1>  <!--titulo-->
+    <div>velocidade (m/s)</div>  <!-- dando nome ao campo abaixo, no caso é o vel-->
+    <input type="number" name ='velocidade' id="vel"> *
+    <div> tempo (s)</div>
+    <input type="number" name ='tempo' id = 'temp'>
+    <input type="button" value = 'multiplicar' onclick= "multiplicar()"> <!-- cria o botão com a função de multiplicar-->
+    <div id ='espaço'> Espaço</div> <!--div criado para ser chamada quando o resultado for mostrado na linha 31-->
+    <script>  /*inicio do JS, com o usuario dando as informações*/
+    function multiplicar(){ /*aplicando a função de multiplicar */
+        var cx1 = window.document.getElementById('vel')  /*atribuindo a caixa 1 uma variavel. que vai buscar seu valor pelo ID com o input na linha 18*/
+        var cx2 = window.document.getElementById('temp') /*atribuindo a caixa 2 uma variavel. que vai buscar seu valor pelo ID com o input na linha 20*/
+        var esp= window.document.getElementById('espaço') /* busca o Id "espaço" que sta dentro da div*/
+        var n1 =Number(cx1.value) /* convertendo o valor digitado na cx1 para numero*/
+        var n2 = Number(cx2.value)
+        var m = n1*n2
+        espaço.innerHTML ='O espaço percorrido foi de ' +m+ ' metros'
+        
+
+    }
+    </script>
+
+    
+</body>
+</html>
